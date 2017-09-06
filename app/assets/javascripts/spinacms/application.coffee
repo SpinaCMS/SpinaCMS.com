@@ -8,3 +8,4 @@
 #= require ./navigation
 #= require ./analytics
 #= require ./guide
+#= require ./header
