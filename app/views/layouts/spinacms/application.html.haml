@@ -1,0 +1,18 @@
+!!!
+%html
+  %head
+    %title= @page.seo_title
+
+    %meta{charset: 'utf-8'}
+    %meta{name: 'description', content: @page.description}
+    = csrf_meta_tags
+
+    = stylesheet_link_tag 'spinacms/application', data_turbolinks_track: true
+
+    = javascript_include_tag 'spinacms/application', data_turbolinks_track: true
+
+    / Typekit
+    = render 'spinacms/shared/typekit'
+    = render 'spinacms/shared/analytics'
+  %body{data: {current_page: @page.id, ancestors: @page.ancestors.ids.join('-')}}
+    = yield

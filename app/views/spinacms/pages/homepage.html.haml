@@ -1,0 +1,4 @@
+%h1= @page.title
+= @page.content(:text).try(:html_safe)
+
+= render 'spinacms/shared/navigation'
