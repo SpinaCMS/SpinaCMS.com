@@ -36,3 +36,38 @@ nav.guide-sidebar
   margin-left: 20px
   max-width: 560px
   padding: 20px 0
+
+// Guide links
+.guide-links
+  margin: 40px 0
+
+  &:after
+    clear: both
+    content: " "
+    display: block
+
+.guide-link
+  color: $purple
+  display: block
+  font-size: 1rem
+  font-weight: 600
+  line-height: 1rem
+  text-decoration: none
+
+  small
+    color: #999
+    display: block
+    font-size: .75rem
+    font-weight: 400
+    margin-bottom: 2px
+
+  &:hover
+    small
+      color: $purple
+
+.guide-link-previous
+  float: left
+
+.guide-link-next
+  float: right
+  text-align: right
