@@ -14,5 +14,5 @@
     / Typekit
     = render 'spinacms/shared/typekit'
     = render 'spinacms/shared/analytics'
-  %body{data: {current_page: @page.id, ancestors: @page.ancestors.ids.join('-')}}
+  %body{data: {current_page: @page.id, ancestors: @page.ancestors.ids.join('-'), view_template: @page.view_template}}
     = yield

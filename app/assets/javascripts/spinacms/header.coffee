@@ -4,7 +4,8 @@ animateHeader = (e) ->
   # Header title animation
   opacity = 1 * (1 - scrollY / 400)
   translate = scrollY / 250 * 50
-  $('.header-title').css({opacity: opacity, transform: "translateY(#{translate}px)"})
+  $('.header-title .container').css({opacity: opacity, transform: "translateY(#{translate}px)"})
+  $('.header-title video').css({transform: "translateX(#{translate * 2}px)"})
 
   if document.getElementById('primary_header').getBoundingClientRect().bottom < -20
     $('body').addClass('fixed-navigation')

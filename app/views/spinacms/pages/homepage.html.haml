@@ -1,4 +1,20 @@
-%h1= @page.title
-= @page.content(:text).try(:html_safe)
+%header#primary_header
+  .header-stars
+    - 3.times do
+      .star
 
-= render 'spinacms/shared/navigation'
+  .header-title
+    .container
+      = link_to 'Spina CMS', root_url, class: 'logo logo-big'
+      .header-subtitle 
+        %h1 A beautiful CMS for Rails developers
+        %p Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw, toen een onbekende.
+
+    = video_tag "spinacms/homepage.mov", autoplay: true, loop: true
+
+%section#main
+  - 23.times do
+    %h1= @page.title
+    = @page.content(:text).try(:html_safe)
+
+    = render 'spinacms/shared/navigation'
