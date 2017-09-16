@@ -1,0 +1,56 @@
+.video-introductions
+  background: #303030
+  display: flex
+  flex: 1
+  padding: 40px
+
+  .video-introduction
+    background: asset_url('spinacms/code.jpg')
+    background-size: cover
+    display: flex
+    flex-direction: column
+    height: 400px
+    flex: 1
+    padding: 40px
+    position: relative
+
+    &:before
+      background: #303030
+      border: 200px solid #303030
+      box-sizing: border-box
+      content: " "
+      height: 100%
+      left: 0px
+      opacity: 1
+      position: absolute
+      top: 0px
+      transition: all .2s ease
+      width: 100%
+      z-index: 1
+
+    &:hover:before
+      background: transparent
+      border: 0px solid #303030
+
+    .video-icon
+      align-items: center
+      display: flex
+      justify-content: center
+      flex: 1
+      z-index: 10
+
+    strong
+      color: white
+      font-size: .875rem
+      font-weight: 700
+      line-height: 2.5rem
+      text-transform: uppercase
+      z-index: 10
+
+    h2
+      color: $green
+      font-size: 2.375rem
+      font-weight: 300
+      line-height: 2.5rem
+      margin: 0
+      z-index: 10

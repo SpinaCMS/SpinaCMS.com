@@ -1,13 +1,25 @@
 // Fixed navigation
-body:not[data-view-template="homepage"].fixed-navigation
+body.fixed-navigation:not([data-view-template="homepage"])
   padding-top: 74px
 
+body[data-view-template="homepage"] nav#primary_nav
+  border-bottom: none
+
+  .logo
+    opacity: 0
+
+body[data-view-template="homepage"].fixed-navigation nav#primary_nav
+  .logo
+    opacity: 1
+
+body.fixed-navigation
   nav#primary_nav
     background: rgba(255, 255, 255, .9)
     border-bottom: 1px solid #ddd
     position: fixed
     top: -64px
     width: 100%
+    z-index: 100
 
     .logo
       height: 64px
@@ -141,6 +153,9 @@ nav#primary_nav
       width: 100%
 
 // Header title
+body[data-view-template="homepage"] .header-title
+  padding: 46px 0 120px 0
+
 .header-title
   justify-content: center
   color: #ececec

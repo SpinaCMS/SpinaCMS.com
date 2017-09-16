@@ -3,6 +3,12 @@
     - 3.times do
       .star
 
+  %nav#primary_nav{data: {turbolinks_permanent: true}}
+    .container
+      = link_to 'Spina CMS', root_url, class: 'logo'
+
+      = render 'spinacms/shared/navigation'
+
   .header-title
     .container
       = link_to 'Spina CMS', root_url, class: 'logo logo-big'
@@ -13,8 +19,16 @@
     = video_tag "spinacms/homepage.mov", autoplay: true, loop: true
 
 %section#main
-  - 23.times do
-    %h1= @page.title
-    = @page.content(:text).try(:html_safe)
+  .container
+    .video-introductions
+      .video-introduction
+        .video-icon
+          Spaceship
+        %strong Developer
+        %h2 You stay in control over your own frontend
 
-    = render 'spinacms/shared/navigation'
+      .video-introduction
+        .video-icon
+          Spacesuit
+        %strong Client
+        %h2 Clients love the simplicity of Spina
