@@ -1,7 +1,7 @@
 {
   "checksum": {
-    "previous": "aa8c59220fa7c10a087301678e417e071e9106d845f2f250fa8aa70d6090258d",
-    "current": "aa8c59220fa7c10a087301678e417e071e9106d845f2f250fa8aa70d6090258d"
+    "previous": "ca22a9c9e697a0d91634dbe75e81a7055414aa8cc5fc7d1683c641610e090138",
+    "current": "ca22a9c9e697a0d91634dbe75e81a7055414aa8cc5fc7d1683c641610e090138"
   },
   "fonts": [
     "app/assets/fonts/spinacms/icons_spinacms.ttf",
@@ -22,6 +22,10 @@
     "observatory": {
       "codepoint": 61700,
       "source": "app/assets/icons/spinacms/observatory.svg"
+    },
+    "play": {
+      "codepoint": 61702,
+      "source": "app/assets/icons/spinacms/play.svg"
     },
     "rocket": {
       "codepoint": 61697,
