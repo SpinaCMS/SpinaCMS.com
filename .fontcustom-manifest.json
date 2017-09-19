@@ -1,0 +1,73 @@
+{
+  "checksum": {
+    "previous": "aa8c59220fa7c10a087301678e417e071e9106d845f2f250fa8aa70d6090258d",
+    "current": "aa8c59220fa7c10a087301678e417e071e9106d845f2f250fa8aa70d6090258d"
+  },
+  "fonts": [
+    "app/assets/fonts/spinacms/icons_spinacms.ttf",
+    "app/assets/fonts/spinacms/icons_spinacms.svg",
+    "app/assets/fonts/spinacms/icons_spinacms.woff",
+    "app/assets/fonts/spinacms/icons_spinacms.eot",
+    "app/assets/fonts/spinacms/icons_spinacms.woff2"
+  ],
+  "glyphs": {
+    "earth": {
+      "codepoint": 61698,
+      "source": "app/assets/icons/spinacms/earth.svg"
+    },
+    "galaxy": {
+      "codepoint": 61699,
+      "source": "app/assets/icons/spinacms/galaxy.svg"
+    },
+    "observatory": {
+      "codepoint": 61700,
+      "source": "app/assets/icons/spinacms/observatory.svg"
+    },
+    "rocket": {
+      "codepoint": 61697,
+      "source": "app/assets/icons/spinacms/rocket.svg"
+    },
+    "rover": {
+      "codepoint": 61701,
+      "source": "app/assets/icons/spinacms/rover.svg"
+    },
+    "space-helmet": {
+      "codepoint": 61696,
+      "source": "app/assets/icons/spinacms/space-helmet.svg"
+    }
+  },
+  "options": {
+    "autowidth": false,
+    "config": "config/fontcustom.yml",
+    "copyright": "",
+    "css3": false,
+    "css_selector": ".icon-{{glyph}}",
+    "debug": false,
+    "font_ascent": 448,
+    "font_descent": 64,
+    "font_design_size": 32,
+    "font_em": 512,
+    "font_name": "icons_spinacms",
+    "force": false,
+    "input": {
+      "templates": "lib/spinacms/fontcustom",
+      "vectors": "app/assets/icons/spinacms"
+    },
+    "no_hash": true,
+    "output": {
+      "css": "app/assets/stylesheets/spinacms",
+      "fonts": "app/assets/fonts/spinacms",
+      "preview": "app/assets/icons/spinacms/preview"
+    },
+    "preprocessor_path": null,
+    "quiet": false,
+    "templates": [
+      "_icons_spinacms.scss",
+      "preview"
+    ]
+  },
+  "templates": [
+    "app/assets/stylesheets/spinacms/_icons_spinacms.scss",
+    "app/assets/icons/spinacms/preview/icons_spinacms-preview.html"
+  ]
+}

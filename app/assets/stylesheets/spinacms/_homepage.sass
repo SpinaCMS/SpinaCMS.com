@@ -40,10 +40,15 @@
       flex: 1
       z-index: 10
 
+      .icon
+        color: #fff
+        font-size: 100px
+
     strong
       color: white
       font-size: .875rem
       font-weight: 700
+      letter-spacing: 0.0625rem
       line-height: 2.5rem
       text-transform: uppercase
       z-index: 10
@@ -109,16 +114,17 @@
       box-shadow: 0 0 20px rgba(0, 0, 0, .15)
       color: #333
       display: flex
+      flex-direction: column
       font-size: .875rem
       font-weight: 700
-      height: 210px
+      height: 170px
       letter-spacing: 0.0625rem
       justify-content: center
-      padding: 20px
+      padding: 40px
       margin: 30px
       text-align: center
       text-transform: uppercase
-      width: 210px
+      width: 170px
 
       @keyframes feature-animation 
         0% 
@@ -129,7 +135,6 @@
           transform: translateX(-15px) translateY(-4px)
         75%
           transform: translateX(15px) translateY(4px)
-          
 
       &:nth-child(1)
         animation-delay: -4s
@@ -140,3 +145,12 @@
 
       &:last-child
         animation-delay: -8s
+
+      .icon
+        align-items: center
+        color: $purple
+        display: flex
+        flex: 1
+        line-height: 100%
+        vertical-align: middle
+        font-size: 75px

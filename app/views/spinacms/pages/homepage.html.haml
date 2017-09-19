@@ -15,6 +15,11 @@
       .header-subtitle 
         %h1 A beautiful CMS for Rails developers
         %p Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw, toen een onbekende.
+        
+      .header-actions
+        = link_to 'Get started', '#', class: 'button button-primary'
+        = link_to 'Demo', '#', class: 'button button-outline-inverse'
+        = link_to 'View on GitHub', '#', class: 'button button-outline-inverse'
 
     = video_tag "spinacms/video.mp4", autoplay: true, loop: true, width: 578, height: 686
 
@@ -23,31 +28,35 @@
     .homepage-videos
       .video
         .video-icon
-          Spaceship
+          .icon.icon-rocket
         %strong Developer
-        %h2 You stay in control over your own frontend
+        %h2 Get started right away and take a look at the guide
 
       .video
         .video-icon
-          Spacesuit
+          .icon.icon-space-helmet
         %strong Client
-        %h2 Clients love the simplicity of Spina
+        %h2 Convince your client by showing them this video
 
   .homepage-features
     .container
       .feature-content
         %label Foundations
-        %h2 Launchpad into the future of content management
+        %h2 Everything you need for your own journey
 
-        %p Spina was built with these foundations in mind.
+        %p Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw, toen een onbekende.
 
       .feature-blocks
         .feature-block
+          .icon.icon-galaxy
           Open source
         .feature-block
+          .icon.icon-observatory
           Ruby on Rails 5+
         %br/
         .feature-block
-          Not everything is editable
+          .icon.icon-earth
+          Multilingual
         .feature-block
+          .icon.icon-rover
           Extendable
