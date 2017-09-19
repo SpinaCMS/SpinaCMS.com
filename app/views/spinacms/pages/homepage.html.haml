@@ -16,19 +16,38 @@
         %h1 A beautiful CMS for Rails developers
         %p Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw, toen een onbekende.
 
-    = video_tag "spinacms/homepage.mov", autoplay: true, loop: true
+    = video_tag "spinacms/video.mp4", autoplay: true, loop: true, width: 578, height: 686
 
 %section#main
   .container
-    .video-introductions
-      .video-introduction
+    .homepage-videos
+      .video
         .video-icon
           Spaceship
         %strong Developer
         %h2 You stay in control over your own frontend
 
-      .video-introduction
+      .video
         .video-icon
           Spacesuit
         %strong Client
         %h2 Clients love the simplicity of Spina
+
+  .homepage-features
+    .container
+      .feature-content
+        %label Foundations
+        %h2 Launchpad into the future of content management
+
+        %p Spina was built with these foundations in mind.
+
+      .feature-blocks
+        .feature-block
+          Open source
+        .feature-block
+          Ruby on Rails 5+
+        %br/
+        .feature-block
+          Not everything is editable
+        .feature-block
+          Extendable

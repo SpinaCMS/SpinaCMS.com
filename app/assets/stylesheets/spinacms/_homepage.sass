@@ -1,10 +1,11 @@
-.video-introductions
+// Homepage videos
+.homepage-videos
   background: #303030
   display: flex
   flex: 1
   padding: 40px
 
-  .video-introduction
+  .video
     background: asset_url('spinacms/code.jpg')
     background-size: cover
     display: flex
@@ -54,3 +55,88 @@
       line-height: 2.5rem
       margin: 0
       z-index: 10
+
+// Homepage features
+.homepage-features
+  background: asset_url('spinacms/features-bg.jpg')
+  background-position: top right
+  background-repeat: no-repeat
+  display: flex
+  margin-top: 40px
+
+  .feature-content
+    display: flex
+    flex-direction: column
+    justify-content: center
+    flex: 2
+
+    label
+      color: #333
+      font-size: 0.875rem
+      font-weight: bold
+      letter-spacing: 0.0625rem
+      margin-bottom: 4px
+      text-transform: uppercase
+
+    h2
+      color: $purple
+      font-size: 2.375rem
+      font-weight: 400
+      line-height: 2.5rem
+      margin: 0
+      margin-bottom: 1rem
+
+    label, h2, p
+      margin-left: 80px
+
+    p
+      color: #666
+      font-size: 1rem
+      line-height: 1.625rem
+
+  .feature-blocks
+    display: flex
+    flex-wrap: wrap
+    flex: 3
+    justify-content: flex-end
+    padding: 135px 0
+
+    .feature-block
+      animation: feature-animation 32s ease infinite
+      align-items: center
+      background: #fff
+      border-radius: 5px
+      box-shadow: 0 0 20px rgba(0, 0, 0, .15)
+      color: #333
+      display: flex
+      font-size: .875rem
+      font-weight: 700
+      height: 210px
+      letter-spacing: 0.0625rem
+      justify-content: center
+      padding: 20px
+      margin: 30px
+      text-align: center
+      text-transform: uppercase
+      width: 210px
+
+      @keyframes feature-animation 
+        0% 
+          transform: translateX(0px) translateY(0px)
+        25%
+          transform: translateX(5px) translateY(7px)
+        50%
+          transform: translateX(-15px) translateY(-4px)
+        75%
+          transform: translateX(15px) translateY(4px)
+          
+
+      &:nth-child(1)
+        animation-delay: -4s
+
+      &:nth-child(2)
+        animation-delay: -12s
+        margin-right: 90px
+
+      &:last-child
+        animation-delay: -8s
