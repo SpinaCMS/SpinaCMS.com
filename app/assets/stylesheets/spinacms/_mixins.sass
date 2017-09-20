@@ -11,3 +11,18 @@
  
   @media all and (-webkit-min-device-pixel-ratio : 1.5), all and (-o-min-device-pixel-ratio: 3/2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5)
     background-image: asset_url("#{$at2x_path}")
+
+@mixin aspect-ratio($width, $height)
+  position: relative
+  &:before
+    display: block
+    content: ""
+    width: 100%
+    padding-top: ($height / $width) * 100%
+
+  > .content
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0

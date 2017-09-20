@@ -24,21 +24,27 @@
     = video_tag "spinacms/video.mp4", autoplay: true, loop: true, width: 578, height: 686
 
 %section#main
+
   .container
     .homepage-videos
-      .video
-        .video-icon
-          .icon.icon-rocket
-          .icon.icon-play
-        %strong Developer
-        %h2 Get started right away and take a look at the guide
+      .content
+        .fullscreen-video
+          .content
+            <div class="js-player" data-type="youtube" data-video-id="bTqVqk7FSmY"></div>
 
-      .video
-        .video-icon
-          .icon.icon-space-helmet
-          .icon.icon-play
-        %strong Client
-        %h2 Convince your client by showing them this video
+        .video
+          .video-icon
+            .icon.icon-rocket
+            .icon.icon-play
+          %strong Developer
+          %h2 Get started right away and take a look at the guide
+
+        = link_to '#', class: 'video fullscreen-video-toggle' do
+          .video-icon
+            .icon.icon-space-helmet
+            .icon.icon-play
+          %strong Client
+          %h2 Convince your client by showing them this video
 
   .homepage-features
     .container

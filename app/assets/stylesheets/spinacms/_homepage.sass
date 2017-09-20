@@ -1,19 +1,41 @@
 // Homepage videos
 .homepage-videos
   background: #303030
-  display: flex
   flex: 1
-  padding: 40px
+  position: relative
+  @include aspect-ratio(16, 9)
+
+  > .content
+    box-sizing: border-box
+    display: flex
+    padding: 40px
+
+  .fullscreen-video
+    left: 0px
+    position: absolute
+    top: 0px
+    width: 100%
+    z-index: -1
+
+  &.fullscreen-video-enabled
+    .video
+      opacity: 0
+
+    .fullscreen-video
+      z-index: 10
 
   .video
     background: asset_url('spinacms/code.jpg')
     background-size: cover
     display: flex
     flex-direction: column
-    height: 400px
     flex: 1
+    opacity: 1
+    outline: none
     padding: 40px
     position: relative
+    text-decoration: none
+    transition: opacity .4s ease
 
     &:before
       background: #303030
