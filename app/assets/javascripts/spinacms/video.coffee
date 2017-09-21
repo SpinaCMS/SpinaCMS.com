@@ -5,12 +5,19 @@ ready = ->
 
 $(document).on 'turbolinks:load', ready
 
-$(document).on 'click', '.fullscreen-video-toggle', (e) ->
+$(document).on 'click', '.fullscreen-video-play', (e) ->
   e.preventDefault()
-  $('.homepage-videos').toggleClass('fullscreen-video-enabled')
+  $('.homepage-videos').addClass('fullscreen-video-enabled')
 
-  # Get all players
+  # Get all players & play the video
   players = plyr.get()
-
-  # Play the video
   players[0].play()
+
+$(document).on 'click', '.fullscreen-video-stop', (e) ->
+  e.preventDefault()
+
+  $('.homepage-videos').removeClass('fullscreen-video-enabled')
+
+  # Get all players & pause the video
+  players = plyr.get()
+  players[0].stop()

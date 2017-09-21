@@ -17,7 +17,7 @@
         %p Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw, toen een onbekende.
         
       .header-actions
-        = link_to 'Get started', '#', class: 'button button-primary'
+        = link_to 'Get started', guide.materialized_path, class: 'button button-primary'
         = link_to 'Demo', '#', class: 'button button-outline-inverse'
         = link_to 'View on GitHub', '#', class: 'button button-outline-inverse'
 
@@ -28,23 +28,24 @@
   .container
     .homepage-videos
       .content
+        = link_to '#', class: 'fullscreen-video-stop' do
+          &times;
         .fullscreen-video
-          .content
-            <div class="js-player" data-type="youtube" data-video-id="bTqVqk7FSmY"></div>
+          .js-player{data: {type: "youtube", video_id: "bTqVqk7FSmY"}}
 
-        .video
+        = link_to guide.materialized_path, class: 'video' do
           .video-icon
             .icon.icon-rocket
-            .icon.icon-play
+            .icon.icon-documentation
           %strong Developer
-          %h2 Get started right away and take a look at the guide
+          %h2 Get started with the Guide to the Galaxy
 
-        = link_to '#', class: 'video fullscreen-video-toggle' do
+        = link_to '#', class: 'video fullscreen-video-play' do
           .video-icon
             .icon.icon-space-helmet
             .icon.icon-play
           %strong Client
-          %h2 Convince your client by showing them this video
+          %h2 Help your client launch their product
 
   .homepage-features
     .container

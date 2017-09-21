@@ -32,6 +32,11 @@
     title:          'Homepage',
     deletable:      false,
     view_template:  'homepage'
+  }, {
+    name:           'guide',
+    title:          'Guide',
+    deletable:      false,
+    view_template:  'guide_index'
   }]
 
 end
