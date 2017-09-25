@@ -1,0 +1,29 @@
+%header#primary_header
+  .header-stars
+    - 3.times do
+      .star
+
+  = render 'spinacms/shared/navigation'
+
+  .header-title
+    .container
+      %h1 Showcase
+      .header-subtitle Go where no one has gone before
+
+%section#main
+  .container
+    .showcase
+      .showcase-info.page-content
+        %h2 Mr. Hop
+        %p
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip.
+        = link_to 'www.misterhop.com'.upcase, 'https://www.misterhop.com', class: 'button button-link', style: 'padding-left: 0px', target: :blank
+
+      .showcase-images
+        = image_tag 'spinacms/showcase/mrhop-detail-background.jpg', class: 'showcase-detail-background'
+        = image_tag 'spinacms/showcase/mrhop-background.jpg', class: 'showcase-background'
+        = image_tag 'spinacms/showcase/mrhop-desktop.jpg', class: 'showcase-desktop'
+        = image_tag 'spinacms/showcase/mrhop-mobile.jpg', class: 'showcase-mobile'
+        = image_tag 'spinacms/showcase/mrhop-detail-overlay.png', class: 'showcase-detail-overlay'

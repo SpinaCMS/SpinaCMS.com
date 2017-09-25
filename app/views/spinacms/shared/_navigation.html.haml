@@ -1,3 +1,7 @@
-%ul
-  - (current_spina_user.present? ? Spina::Page.active : Spina::Page.live).roots.sorted.in_menu.each do |page|
-    %li{data: {page_id: page.id}}= link_to page.menu_title, page.materialized_path
+%nav#primary_nav{data: {turbolinks_permanent: true}}
+  .container
+    = link_to 'Spina CMS', root_url, class: 'logo'
+
+    %ul
+      - (current_spina_user.present? ? Spina::Page.active : Spina::Page.live).roots.sorted.in_menu.each do |page|
+        %li{data: {page_id: page.id}}= link_to page.menu_title, page.materialized_path

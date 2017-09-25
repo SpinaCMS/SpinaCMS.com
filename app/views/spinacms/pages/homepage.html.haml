@@ -3,11 +3,7 @@
     - 3.times do
       .star
 
-  %nav#primary_nav{data: {turbolinks_permanent: true}}
-    .container
-      = link_to 'Spina CMS', root_url, class: 'logo'
-
-      = render 'spinacms/shared/navigation'
+  = render 'spinacms/shared/navigation'
 
   .header-title
     .container
@@ -18,10 +14,10 @@
         
       .header-actions
         = link_to 'Get started', guide.materialized_path, class: 'button button-primary'
-        = link_to 'Demo', '#', class: 'button button-outline-inverse'
-        = link_to 'View on GitHub', '#', class: 'button button-outline-inverse'
+        = link_to 'Demo', 'http://spinacms-demo.herokuapp.com/admin/', target: :blank, class: 'button button-outline-inverse'
+        = link_to 'View on GitHub', 'https://www.github.com/denkGroot/Spina', class: 'button button-outline-inverse'
 
-    = video_tag "spinacms/video.mp4", autoplay: true, loop: true, width: 578, height: 686
+    = image_tag 'spinacms/poster.png', width: 577, height: 685
 
 %section#main
 

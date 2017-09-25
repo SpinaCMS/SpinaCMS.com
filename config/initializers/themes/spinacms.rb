@@ -20,6 +20,18 @@
     usage:       'Use for documentation',
     page_parts: ['text']
   }, {
+    name:       'guide_index',
+    title:      'Guide',
+    page_parts: ['text']
+  }, {
+    name:       'plugins',
+    title:      'Plugins',
+    page_parts: []
+  }, {
+    name:       'showcase',
+    title:      'Showcase',
+    page_parts: []
+  }, {
     name: 'show',
     title:        'Default',
     description:  'A simple page',
@@ -37,6 +49,16 @@
     title:          'Guide',
     deletable:      false,
     view_template:  'guide_index'
+  }, {
+    name:           'showcase',
+    title:          'Showcase',
+    deletable:      false,
+    view_template:  'showcase'
+  }, {
+    name:           'plugins',
+    title:          'Plugins',
+    deletable:      false,
+    view_template:  'plugins'
   }]
 
 end

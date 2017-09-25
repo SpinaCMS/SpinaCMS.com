@@ -1,0 +1,73 @@
+.showcase
+  padding-bottom: 80px
+  text-align: center
+  width: 100%
+
+  .showcase-images:hover
+    .showcase-background
+      transform: translateX(40px) translateY(-20px)
+
+    .showcase-desktop
+      transform: translateY(10px)
+
+    .showcase-mobile
+      transform: translateX(-20px) translateY(20px)
+
+  .showcase-info
+    display: block
+    text-align: left
+    margin-left: 40px
+    max-width: 450px
+
+    h2
+      font-size: 2.375rem
+      font-weight: 400
+
+    p
+      font-size: 1.125rem
+      line-height: 2rem
+
+  .showcase-images
+    display: inline-block
+    margin-top: 40px
+    position: relative
+
+    img
+      box-shadow: 0 
+      display: block
+      transition: transform 1s ease
+      max-width: 100%
+
+    .showcase-detail-background
+      bottom: 0px
+      left: 0px
+      position: absolute
+      transform: translateX(-120%)
+
+    .showcase-detail-overlay
+      position: absolute
+      right: 0px
+      top: 0px
+      transform: translateX(80%)
+      z-index: 15
+
+    .showcase-background
+      position: absolute
+      top: -40px
+      right: -40px
+      z-index: 1
+
+    .showcase-desktop
+      border-radius: 3px
+      box-shadow: 0 0 50px rgba(0, 0, 0, .2)
+      margin: 0 auto
+      position: relative
+      z-index: 5
+
+    .showcase-mobile
+      border-radius: 3px
+      box-shadow: 0 0 50px rgba(0, 0, 0, .2)
+      bottom: -40px
+      left: -40px
+      position: absolute
+      z-index: 10
