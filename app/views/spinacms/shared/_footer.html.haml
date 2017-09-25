@@ -1,0 +1,33 @@
+%footer#footer{data: {turbolinks_permanent: true}}
+  .container
+
+    .column
+      %h3 Community
+
+      %ul
+        %li
+          = link_to 'Slack', 'https://slack-spinacms.herokuapp.com/'
+        %li
+          = link_to 'Github', 'https://github.com/denkGroot/Spina'
+        %li
+          = link_to 'Open Collective', 'https://opencollective.com/spina'
+
+    .column
+      %h3 Explore
+
+      %ul
+        %li
+          = link_to 'Stories on Medium', 'https://medium.com/spina-cms'
+        %li
+          = link_to 'Releases', 'https://github.com/denkGroot/Spina/releases'
+
+    .column
+
+    .column
+      %h3 Sponsor
+      #code-sponsor-widget      
+
+  .mit-license
+    Spina CMS is released under the MIT license by 
+    = link_to 'https://www.denkgroot.com/en', target: :blank do
+      = image_tag 'spinacms/dg.png', width: 28, height: 31
