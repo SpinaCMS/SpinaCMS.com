@@ -9,7 +9,6 @@ animateHeader = (e) ->
 
   if document.getElementById('primary_header').getBoundingClientRect().bottom < -20
     $('body').addClass('fixed-navigation')
-
     translate = -1 * document.getElementById('primary_header').getBoundingClientRect().bottom - 20
     translate = 64 if translate > 64
     opacity = translate / 64
