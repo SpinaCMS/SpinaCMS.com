@@ -35,3 +35,10 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
+
+group :production do
+  gem 'rails_12factor'
+  gem 'fog'
+  gem 'dalli'
+  gem 'connection_pool'
+end
