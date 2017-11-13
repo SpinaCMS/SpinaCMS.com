@@ -2,6 +2,23 @@ footer#footer
   background: #f5f5f5
   padding: 40px 0
 
+  @media #{$mobile}
+    margin-top: 20px
+    padding: 10px 0
+
+    .container
+      display: block
+
+    .column
+      float: left
+      width: 50%
+
+      &:last-child
+        clear: both
+        float: none
+        padding-top: 10px
+        width: 100%
+
   .mit-license
     color: #999
     font-size: .875rem
@@ -18,6 +35,9 @@ footer#footer
   #code-sponsor-widget
     text-align: left
     margin: -18px -18px 0 -18px
+
+    @media #{$mobile}
+      text-align: center
 
   ul
     list-style: none

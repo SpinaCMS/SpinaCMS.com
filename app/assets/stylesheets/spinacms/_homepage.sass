@@ -5,10 +5,22 @@
   position: relative
   @include aspect-ratio(16, 9)
 
+  @media #{$mobile}
+    background: none
+    width: 100%
+
+    &:before
+      display: none
+
   > .content
     box-sizing: border-box
     display: flex
     padding: 40px
+
+    @media #{$mobile}
+      display: block
+      padding: 0
+      position: relative
 
   .fullscreen-video
     left: 0px
@@ -62,6 +74,9 @@
     text-decoration: none
     transition: opacity .4s ease
 
+    @media #{$mobile}
+      margin-bottom: 15px
+
     &:last-child
       background: asset_url('spinacms/moon.jpg')
       background-size: cover
@@ -79,6 +94,9 @@
       transition: all .2s ease
       width: 100%
       z-index: 1
+
+      @media #{$mobile}
+        display: none
 
     &:hover:before
       background: transparent
@@ -156,6 +174,14 @@
   display: flex
   margin-top: 80px
 
+  @media #{$mobile}
+    background: none
+    display: block
+    margin-top: 15px
+
+    .container
+      display: block
+
   .feature-content
     display: flex
     flex-direction: column
@@ -181,6 +207,9 @@
     label, h2, p
       margin-left: 80px
 
+      @media #{$mobile}
+        margin-left: 0px
+
     p
       color: #666
       font-size: 1rem
@@ -192,6 +221,10 @@
     flex: 3
     justify-content: flex-end
     padding: 135px 0
+
+    @media #{$mobile}
+      display: block
+      padding: 0
 
     @keyframes feature-animation 
       from
@@ -228,9 +261,21 @@
         animation-delay: -2s
         margin-right: 90px
 
+        @media #{$mobile}
+          margin-right: 0
+
       &:last-child
         animation-duration: 10s
         animation-delay: -5s
+
+      @media #{$mobile}
+        animation: none
+        box-sizing: border-box
+        box-shadow: none
+        float: left
+        margin: 0
+        padding: 20px
+        width: 50%
 
       .icon
         align-items: center

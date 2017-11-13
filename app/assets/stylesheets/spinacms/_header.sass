@@ -55,6 +55,9 @@ header#primary_header
   overflow: hidden
   position: relative
 
+  @media #{$mobile}
+    margin-bottom: 20px
+
   @keyframes falling-star
     from 
       transform: translateX(100%) rotate(0deg)
@@ -173,7 +176,7 @@ body[data-view-template="homepage"] .header-title
   padding: 46px 0 120px 0
 
   @media #{$mobile}
-    padding: 20px 0
+    padding: 0
 
 .header-title
   justify-content: center
@@ -186,7 +189,7 @@ body[data-view-template="homepage"] .header-title
   z-index: 1
 
   @media #{$mobile}
-    padding: 20px 0
+    padding: 0
 
   .container
     flex: 1
@@ -195,7 +198,9 @@ body[data-view-template="homepage"] .header-title
     padding-left: 12%
 
     @media #{$mobile}
+      opacity: 1 !important
       padding: 20px
+      transform: none !important
 
   h1
     font-size: 4.5rem
@@ -220,6 +225,19 @@ body[data-view-template="homepage"] .header-title
 
     .button
       margin-right: 10px
+
+      @media #{$mobile}
+        display: block
+        margin-bottom: 15px
+        margin-right: 0
+        text-align: center
+
+        &:last-child
+          margin-bottom: 5px
+
+    .demo-button
+      @media #{$mobile}
+        display: none
 
   img
     border-radius: 10px 0 0 10px
