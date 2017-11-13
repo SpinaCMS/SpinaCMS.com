@@ -193,8 +193,14 @@
     justify-content: flex-end
     padding: 135px 0
 
+    @keyframes feature-animation 
+      from
+        transform: rotate(0deg) translate(-10px) rotate(0deg)
+      to
+        transform: rotate(360deg) translate(-10px) rotate(-360deg)
+
     .feature-block
-      animation: feature-animation 32s ease infinite
+      animation: feature-animation 8s linear infinite
       align-items: center
       background: #fff
       border-radius: 5px
@@ -213,25 +219,18 @@
       text-transform: uppercase
       width: 170px
 
-      @keyframes feature-animation 
-        0% 
-          transform: translateX(0px) translateY(0px)
-        25%
-          transform: translateX(5px) translateY(7px)
-        50%
-          transform: translateX(-15px) translateY(-4px)
-        75%
-          transform: translateX(15px) translateY(4px)
-
       &:nth-child(1)
-        animation-delay: -4s
+        animation-duration: 12s
+        animation-delay: -1s
 
       &:nth-child(2)
-        animation-delay: -12s
+        animation-duration: 6s
+        animation-delay: -2s
         margin-right: 90px
 
       &:last-child
-        animation-delay: -8s
+        animation-duration: 10s
+        animation-delay: -5s
 
       .icon
         align-items: center

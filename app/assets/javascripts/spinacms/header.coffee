@@ -1,5 +1,9 @@
 animateHeader = (e) ->
   scrollY = window.scrollY
+  direction = "down"
+
+  if $('body').attr('data-scroll-y') and $('body').attr('data-scroll-y') > scrollY
+    direction = "up"
 
   # Header title animation
   opacity = 1 * (1 - scrollY / 400)
@@ -16,5 +20,7 @@ animateHeader = (e) ->
   else
     $('body').removeClass('fixed-navigation')
     $('#primary_nav').css({transform: '', opacity: 1})
+
+  $('body').attr('data-scroll-y', scrollY)
 
 $(window).on 'scroll', animateHeader
