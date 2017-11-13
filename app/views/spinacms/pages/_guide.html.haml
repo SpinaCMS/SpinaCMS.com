@@ -12,8 +12,8 @@
 
 %section#main
   .container
-    .sidebar
-      %nav.guide-sidebar
+    .sidebar.guide-sidebar
+      %nav
         %ul
           - @page.root.children.sorted.in_menu.active.each do |page|
             %li{data: {page_id: page.id}}

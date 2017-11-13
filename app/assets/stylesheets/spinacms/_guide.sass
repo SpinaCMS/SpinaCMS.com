@@ -1,5 +1,9 @@
 // Sidebar navigation
-nav.guide-sidebar
+.guide-sidebar
+  @media #{$mobile}
+    display: none
+
+.guide-sidebar nav
   border-right: 1px solid #dcdcdc
   margin-bottom: 80px
   margin-right: 40px
@@ -51,6 +55,9 @@ nav.guide-sidebar
   margin-left: 20px
   max-width: 740px
   padding: 20px 0
+
+  @media #{$mobile}
+    margin-left: 0
 
 // Guide links
 .guide-links
