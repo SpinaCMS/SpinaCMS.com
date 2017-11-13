@@ -1,7 +1,16 @@
 // Sidebar navigation
 .guide-sidebar
   @media #{$mobile}
-    display: none
+    box-sizing: border-box
+    display: block
+    min-width: 250px
+    width: 250px
+
+.guide
+  @media #{$mobile}
+    box-sizing: border-box
+    transform: translateX(-200px)
+    width: calc(100% + 200px)
 
 .guide-sidebar nav
   border-right: 1px solid #dcdcdc
@@ -57,7 +66,7 @@
   padding: 20px 0
 
   @media #{$mobile}
-    margin-left: 0
+    margin-left: -10px
 
 // Guide links
 .guide-links
