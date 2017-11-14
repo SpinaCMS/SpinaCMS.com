@@ -9,14 +9,21 @@
 .guide
   @media #{$mobile}
     box-sizing: border-box
-    transform: translateX(-200px)
-    width: calc(100% + 200px)
+    transform: translateX(-250px)
+    transition: transform .3s ease
+    width: calc(100% + 250px)
+
+    &.opened
+      transform: translateX(0px)
 
 .guide-sidebar nav
   border-right: 1px solid #dcdcdc
   margin-bottom: 80px
   margin-right: 40px
   padding: 20px 0
+
+  @media #{$mobile}
+    margin-right: 0px
 
   ul
     list-style: none
@@ -66,7 +73,17 @@
   padding: 20px 0
 
   @media #{$mobile}
-    margin-left: -10px
+    padding-top: 0
+
+  .toggle-guide-navigation
+    display: none
+
+    @media #{$mobile}
+      // background: red
+      color: #999
+      display: inline-block
+      font-size: .875rem
+      margin-bottom: 25px
 
 // Guide links
 .guide-links

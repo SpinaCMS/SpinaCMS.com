@@ -1,1 +1,31 @@
-= render partial: 'spinacms/pages/guide'
+%header#primary_header
+  .header-stars
+    - 3.times do
+      .star
+
+  = render 'spinacms/shared/navigation'
+
+  .header-title
+    .container
+      %h1 Guide
+      .header-subtitle Read our Guide to the Galaxy to start exploring
+
+%section#main
+  .container.guide
+    .sidebar.guide-sidebar
+      %nav
+        %ul
+          - @page.root.children.sorted.in_menu.active.each do |page|
+            %li{data: {page_id: page.id}}
+              = link_to page.menu_title, page.materialized_path, data: {remote: true}
+
+              %ul
+                - page.children.sorted.in_menu.active.each do |child_page|
+                  %li{data: {page_id: child_page.id}}
+                    = link_to child_page.menu_title, child_page.materialized_path, data: {remote: true}
+
+    .main
+      .guide-content.page-content
+        = link_to 'Switch chapter', '#', class: 'toggle-guide-navigation'
+
+        %div= render partial: 'spinacms/pages/guide'
