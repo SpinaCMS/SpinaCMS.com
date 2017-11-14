@@ -11,7 +11,7 @@
       .header-subtitle Go where no one has gone before
 
 %section#main
-  .container
+  .container{style: 'display: block'}
     .showcase
       .showcase-info.page-content
         %h2 Mr. Hop
@@ -27,3 +27,20 @@
         = image_tag 'spinacms/showcase/mrhop-desktop.jpg', class: 'showcase-desktop'
         = image_tag 'spinacms/showcase/mrhop-mobile.jpg', class: 'showcase-mobile'
         = image_tag 'spinacms/showcase/mrhop-detail-overlay.png', class: 'showcase-detail-overlay'
+
+
+    .showcase
+      .showcase-info.page-content
+        %h2 Brinks CoffeeRoasters
+        %p
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip.
+        = link_to 'www.brinkscoffeeroasters.nl'.upcase, 'https://www.brinkscoffeeroasters.nl', class: 'button button-link', style: 'padding-left: 0px', target: :blank
+
+      .showcase-images
+        = image_tag 'spinacms/showcase/brinks-detail-background.jpg', class: 'showcase-detail-background'
+        = image_tag 'spinacms/showcase/mrhop-background.jpg', class: 'showcase-background'
+        = image_tag 'spinacms/showcase/brinks-desktop.jpg', class: 'showcase-desktop'
+        = image_tag 'spinacms/showcase/brinks-mobile.jpg', class: 'showcase-mobile'
+        = image_tag 'spinacms/showcase/brinks-detail-overlay.png', class: 'showcase-detail-overlay'

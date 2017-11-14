@@ -1,7 +1,11 @@
 .showcase
+  margin-bottom: 80px
   padding-bottom: 80px
   text-align: center
   width: 100%
+
+  @media #{$mobile}
+    margin-bottom: 20px
 
   .showcase-images:hover
     .showcase-background
@@ -19,13 +23,23 @@
     margin-left: 40px
     max-width: 450px
 
+    @media #{$mobile}
+      margin-left: 0
+
     h2
       font-size: 2.375rem
       font-weight: 400
 
+      @media #{$mobile}
+        font-size: 1.5rem
+
     p
       font-size: 1.125rem
       line-height: 2rem
+
+      @media #{$mobile}
+        font-size: 1rem
+        line-height: 1.625rem
 
   .showcase-images
     display: inline-block
@@ -51,11 +65,17 @@
       transform: translateX(80%)
       z-index: 15
 
+      @media #{$mobile}
+        display: none
+
     .showcase-background
       position: absolute
       top: -40px
       right: -40px
       z-index: 1
+
+      @media #{$mobile}
+        width: 200px
 
     .showcase-desktop
       border-radius: 3px
@@ -71,3 +91,30 @@
       left: -40px
       position: absolute
       z-index: 10
+
+      @media #{$mobile}
+        width: 125px
+
+  &:nth-child(2n)
+    .showcase-info
+      float: right
+
+    .showcase-images
+      .showcase-background
+        left: -40px
+        right: auto
+        z-index: 1
+
+      .showcase-mobile
+        left: auto
+        right: -40px
+
+      &:hover
+        .showcase-background
+          transform: translateX(-40px) translateY(-20px)
+
+        .showcase-desktop
+          transform: translateY(10px)
+
+        .showcase-mobile
+          transform: translateX(20px) translateY(20px)
