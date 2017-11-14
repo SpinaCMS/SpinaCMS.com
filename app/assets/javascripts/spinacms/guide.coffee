@@ -12,3 +12,5 @@ $(document).on 'click', '.toggle-guide-navigation', (e) ->
 
 $(document).on 'click', '.guide-sidebar nav ul li a', (e) ->
   $('.guide').removeClass('opened')
+  $('.guide-sidebar li').removeClass('current active')
+  $(this).parent().addClass('current active')
