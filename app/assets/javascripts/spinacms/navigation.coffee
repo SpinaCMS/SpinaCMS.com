@@ -14,7 +14,3 @@ ready = ->
       $("li[data-page-id=#{ancestor}]").addClass('active')
 
 $(document).on 'turbolinks:load', ready
-
-$(document).on 'click', '#primary_nav li a', (e) ->
-  $('#primary_nav li').removeClass('current active')
-  $(this).parent().addClass('current active')
