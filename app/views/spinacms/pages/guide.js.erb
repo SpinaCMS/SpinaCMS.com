@@ -1,5 +1,1 @@
-$('.guide-content > div').html("<%=j render 'spinacms/pages/guide' %>");
-$('pre code').each(function(i, block) {
-  block.innerHTML = block.innerHTML.replace("\n", "");
-  hljs.highlightBlock(block);
-});
+$('.guide-content > div').html("<%=j render 'spinacms/pages/guide' %>").enhanceGuide();

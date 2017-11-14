@@ -1,9 +1,14 @@
-ready = ->
-  $('pre code').each (i, block) ->
-    block.innerHTML = block.innerHTML.replace("\n", "")
-    hljs.highlightBlock(block)
+$.fn.extend
+  enhanceGuide: (options) ->
+    return @each () ->
+      $guide = $(this)
 
-$(document).on 'turbolinks:load', ready
+      $guide.find('pre code').each (i, block) ->
+        block.innerHTML = block.innerHTML.replace("\n", "")
+        hljs.highlightBlock(block)
+
+$(document).on 'turbolinks:load', ->
+  $('.guide').enhanceGuide()
 
 $(document).on 'click', '.toggle-guide-navigation', (e) ->
   e.preventDefault()
