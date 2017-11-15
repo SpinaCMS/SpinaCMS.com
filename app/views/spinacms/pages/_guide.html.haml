@@ -1,10 +1,15 @@
 != GuideSyntax.convert(@page.content(:text))
 
-.guide-links
-  = link_to '#', class: 'guide-link guide-link-previous' do
-    %small previous chapter
-    Installation
+/ .guide-links
+/   - if @page.has_children?
+/     - next_page = @page.children.sorted.first
 
-  = link_to '#', class: 'guide-link guide-link-next' do
-    %small next chapter
-    Upgrade instructions
+/   / = @page.sibling_ids
+/   / = link_to '#', class: 'guide-link guide-link-previous' do
+/   /   %small previous chapter
+/   /   Installation
+
+/   - if next_page.present?
+/     = link_to next_page.materialized_path, class: 'guide-link guide-link-next' do
+/       %small next chapter
+/       = next_page.menu_title
