@@ -1,7 +1,7 @@
 {
   "checksum": {
-    "previous": "09a7f906ceb4e97f947278473722a0085d885d5bb5a27d269ea56fd59ebb7094",
-    "current": "09a7f906ceb4e97f947278473722a0085d885d5bb5a27d269ea56fd59ebb7094"
+    "previous": "ac7240d18102a6a7aa0b20d17fc192f4fa5e9bf63816f5898f92914ea8ebf1fa",
+    "current": "ac7240d18102a6a7aa0b20d17fc192f4fa5e9bf63816f5898f92914ea8ebf1fa"
   },
   "fonts": [
     "app/assets/fonts/spinacms/icons_spinacms.ttf",
@@ -18,6 +18,10 @@
     "earth": {
       "codepoint": 61698,
       "source": "app/assets/icons/spinacms/earth.svg"
+    },
+    "export": {
+      "codepoint": 61704,
+      "source": "app/assets/icons/spinacms/export.svg"
     },
     "galaxy": {
       "codepoint": 61699,
