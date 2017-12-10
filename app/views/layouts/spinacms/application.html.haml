@@ -18,9 +18,6 @@
     / Analytics
     = render 'spinacms/shared/analytics'
 
-    / Code Sponsor
-    = render 'spinacms/shared/codesponsor'
-
   %body{data: {current_page: @page.id, ancestors: @page.ancestors.ids.join('-'), view_template: @page.view_template}}
     = yield
 
