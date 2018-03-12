@@ -18,6 +18,9 @@
     / Analytics
     = render 'spinacms/shared/analytics'
 
+    / ProductHunt Ship
+    = render 'spinacms/shared/product_hunt_ship'
+
   %body{data: {current_page: @page.id, ancestors: @page.ancestors.ids.join('-'), view_template: @page.view_template}}
     = yield
 

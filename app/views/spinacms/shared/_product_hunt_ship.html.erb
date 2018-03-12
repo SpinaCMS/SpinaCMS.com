@@ -1,0 +1,16 @@
+<script>
+  $(document).on('turbolinks:load', function() {
+    window.productHuntUpcoming = {
+      appId: 4590,
+      position: 'bottomRight',
+    };
+
+    (function(doc, scr, src, a, b) {
+      a = doc.createElement(scr);
+      b = doc.getElementsByTagName(scr)[0];
+      a.async = true;
+      a.src = src;
+      b.parentNode.insertBefore(a, b);
+    })(document, 'script', 'https://assets.producthunt.com/assets/upwigloader.js');
+  });
+</script>
