@@ -13,16 +13,16 @@
 %section#main
   .container.guide
     .sidebar.guide-sidebar
-      %nav
+      %nav{data: {turbolinks_permanent: true}}
         %ul
-          - @page.root.children.sorted.in_menu.active.each do |page|
+          - current_page.root.children.sorted.in_menu.active.each do |page|
             %li{data: {page_id: page.id}}
-              = link_to page.menu_title, page.materialized_path#, data: {remote: true}
+              = link_to page.menu_title, page.materialized_path + '#main'
 
               %ul
                 - page.children.sorted.in_menu.active.each do |child_page|
                   %li{data: {page_id: child_page.id}}
-                    = link_to child_page.menu_title, child_page.materialized_path#, data: {remote: true}
+                    = link_to child_page.menu_title, child_page.materialized_path + '#main'
 
     .main
       .guide-content.page-content
