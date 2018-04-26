@@ -17,12 +17,15 @@
         = link_to 'Demo', 'http://spinacms-demo.herokuapp.com/admin/', target: :blank, class: 'button button-outline-inverse demo-button'
         = link_to 'View on GitHub', 'https://www.github.com/denkGroot/Spina', class: 'button button-outline-inverse'
 
+      .header-footer
+        #codefund_ad
+
       / .header-footer
       /   = link_to 'http://jobs.denkgroot.com/ruby-on-rails-developer/en', target: :blank, class: 'job-opening' do
       /     %span Job Opening
       /     Ruby on Rails Developer
 
-    = image_tag 'spinacms/poster.png', width: 577, height: 685
+    = image_tag 'spinacms/poster.png', width: 577, height: 685, class: 'header-image'
 
 %section#main
 
@@ -73,5 +76,3 @@
 
   .homepage-sponsors
     <script src="https://opencollective.com/spina/banner.js"></script>
-
-    #codefund_ad
