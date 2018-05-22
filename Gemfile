@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.0.rc2'
+gem 'rails', '~> 5.2.0'
 gem 'pg'
 gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
@@ -20,7 +20,7 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 
 # Spina
-gem 'spina', github: 'SpinaCMS/Spina', branch: 'activestorage'
+gem 'spina', github: 'SpinaCMS/Spina'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -41,4 +41,5 @@ group :production do
   gem 'fog'
   gem 'dalli'
   gem 'connection_pool'
+  gem 'skylight'
 end
