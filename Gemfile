@@ -20,7 +20,7 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 
 # Spina
-gem 'spina', github: 'SpinaCMS/Spina'
+gem 'spina', '~> 1.0'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

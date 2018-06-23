@@ -3,6 +3,9 @@ ready = ->
   # Initialize plyr
   plyr.setup('.js-player')
 
+  # Initialize plyr for screencasts
+  plyr.setup('.screencast-player', {ratio: "16:10"})
+
 $(document).on 'turbolinks:load', ready
 
 $(document).on 'click', '.fullscreen-video-play', (e) ->

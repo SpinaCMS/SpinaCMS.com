@@ -1,23 +1,3 @@
-GIT
-  remote: https://github.com/SpinaCMS/Spina.git
-  revision: 15f6f552f821996655fdb469a2c5744aae5166b0
-  specs:
-    spina (1.0.0)
-      ancestry
-      bcrypt
-      breadcrumbs_on_rails
-      coffee-rails
-      haml-rails
-      jquery-rails
-      jsonb_accessor (>= 1.0.0)
-      kaminari
-      mini_magick
-      mobility (>= 0.5.1)
-      rack-rewrite (>= 1.5.0)
-      rails (>= 5.2)
-      sass-rails
-      turbolinks (~> 5)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -99,7 +79,7 @@ GEM
     erubis (2.7.0)
     excon (0.62.0)
     execjs (2.7.0)
-    ffi (1.9.23)
+    ffi (1.9.25)
     fission (0.5.0)
       CFPropertyList (~> 2.2)
     fog (1.41.0)
@@ -310,12 +290,12 @@ GEM
     mini_mime (1.0.0)
     mini_portile2 (2.3.0)
     minitest (5.11.3)
-    mobility (0.6.0)
+    mobility (0.7.5)
       i18n (>= 0.6.10, < 1.1)
       request_store (~> 1.0)
     multi_json (1.13.1)
     nio4r (2.3.1)
-    nokogiri (1.8.2)
+    nokogiri (1.8.3)
       mini_portile2 (~> 2.3.0)
     pg (1.0.0)
     public_suffix (3.0.2)
@@ -387,12 +367,27 @@ GEM
       skylight-core (= 2.0.1)
     skylight-core (2.0.1)
       activesupport (>= 4.2.0)
+    spina (1.0.3)
+      ancestry
+      bcrypt
+      breadcrumbs_on_rails
+      coffee-rails
+      haml-rails
+      jquery-rails
+      jsonb_accessor (>= 1.0.0)
+      kaminari
+      mini_magick
+      mobility (>= 0.5.1)
+      rack-rewrite (>= 1.5.0)
+      rails (>= 5.2)
+      sass-rails
+      turbolinks (~> 5)
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
       spring (>= 1.2, < 3.0)
-    sprockets (3.7.1)
+    sprockets (3.7.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
     sprockets-rails (3.2.1)
@@ -444,7 +439,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   selenium-webdriver
   skylight
-  spina!
+  spina (~> 1.0)
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)
