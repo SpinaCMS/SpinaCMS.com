@@ -1,15 +1,21 @@
 != GuideSyntax.convert(content(:text))
 
-/ .guide-links
-/   - if @page.has_children?
-/     - next_page = @page.children.sorted.first
+.guide-links
+  - ids = Spina::Page.where(view_template: 'guide').sorted.ids
+  - current_index = ids.index(@page.id)
 
-/   / = @page.sibling_ids
-/   / = link_to '#', class: 'guide-link guide-link-previous' do
-/   /   %small previous chapter
-/   /   Installation
+  - if current_index > 0
+    - @previous_page = Spina::Page.find_by(id: ids[current_index - 1])
 
-/   - if next_page.present?
-/     = link_to next_page.materialized_path, class: 'guide-link guide-link-next' do
-/       %small next chapter
-/       = next_page.menu_title
+  - if current_index < ids.count
+    - @next_page = Spina::Page.find_by(id: ids[current_index + 1])
+
+  - if @previous_page.present?
+    = link_to @previous_page.materialized_path, class: 'guide-link guide-link-previous' do
+      %small previous chapter
+      = @previous_page.menu_title
+
+  - if @next_page.present?
+    = link_to @next_page.materialized_path, class: 'guide-link guide-link-next' do
+      %small next chapter
+      = @next_page.menu_title

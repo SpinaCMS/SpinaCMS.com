@@ -3,7 +3,7 @@ $.fn.extend
     return @each () ->
       $guide = $(this)
 
-      $guide.find('pre code').each (i, block) ->
+      $guide.find('code').each (i, block) ->
         block.innerHTML = block.innerHTML.replace("\n", "")
         hljs.highlightBlock(block)
 

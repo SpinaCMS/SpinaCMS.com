@@ -19,8 +19,11 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 
+gem 'httparty'
+gem 'redcarpet'
+
 # Spina
-gem 'spina', '~> 1.0'
+gem 'spina', github: 'spinacms/spina'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -38,7 +41,7 @@ end
 
 group :production do
   gem 'rails_12factor'
-  gem 'fog'
+  gem 'fog-aws'
   gem 'dalli'
   gem 'connection_pool'
   gem 'skylight'
