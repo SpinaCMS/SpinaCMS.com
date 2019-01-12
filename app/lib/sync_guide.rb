@@ -20,7 +20,7 @@ class SyncGuide
     def create_pages(docs, parent)
       docs.each do |doc|
         if doc["type"] == "file"
-          title = doc["name"].gsub(/\.md\z/, "").gsub(/\A\d?\.?\s/, "").humanize
+          title = doc["name"].gsub(/\.md\z/, "").gsub(/\A\d?\.?(\s|_)?/, "").humanize
           page = parent.children.create(title: title, view_template: "guide")
 
           # Content
@@ -31,7 +31,7 @@ class SyncGuide
           child_folder = docs.find do |d|
             next if d["type"] != "dir"
 
-            dir_title = d["name"].gsub(/\.md\z/, "").gsub(/\A\d?\.?\s/, "").humanize
+            dir_title = d["name"].gsub(/\.md\z/, "").gsub(/\A\d?\.?(\s|_)?/, "").humanize
             dir_title == title
           end
           create_pages(get_url(child_folder["url"]), page) if child_folder.present?
