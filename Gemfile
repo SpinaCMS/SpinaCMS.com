@@ -22,7 +22,7 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 
 gem 'httparty'
-gem 'redcarpet'
+gem 'commonmarker'
 
 # Spina
 gem 'spina', github: 'spinacms/spina'
