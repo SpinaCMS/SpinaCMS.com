@@ -21,7 +21,7 @@ class SyncGuide
       docs.each do |doc|
         if doc["type"] == "file"
           title = doc["name"].gsub(/\.md\z/, "").gsub(/\A\d?\.?(\s|_)?/, "").humanize
-          page = parent.children.create(title: title, view_template: "guide")
+          page = Spina::Page.create(title: title, view_template: "guide", parent_id: parent.id)
 
           # Content
           c = get_url(doc["download_url"]).body
