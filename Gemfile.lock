@@ -1,5 +1,6 @@
-PATH
-  remote: ../spina
+GIT
+  remote: https://github.com/spinacms/spina.git
+  revision: 70bd503b597fa1dd0a76a4e5799cbd97883b8d75
   specs:
     spina (1.1.1)
       ancestry

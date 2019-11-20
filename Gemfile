@@ -25,8 +25,7 @@ gem 'httparty'
 gem 'commonmarker'
 
 # Spina
-# gem 'spina', github: 'spinacms/spina'
-gem 'spina', path: '~/apps/spina'
+gem 'spina', github: 'spinacms/spina'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
