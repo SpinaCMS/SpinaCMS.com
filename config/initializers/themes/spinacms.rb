@@ -3,40 +3,40 @@
   theme.name = 'spinacms'
   theme.title = 'Spina CMS'
 
-  theme.page_parts = [{
+  theme.parts = [{
     name:           'text',
     title:          'Text',
-    partable_type:  'Spina::Text'
+    part_type:  'Spina::Parts::Text'
   }]
 
   theme.view_templates = [{
     name:       'homepage',
     title:      'Homepage',
-    page_parts: ['text']
+    parts: ['text']
   }, {
     name:       'guide',
     title:      'Guide',
     description: 'Guide page',
     usage:       'Use for documentation',
-    page_parts: ['text']
+    parts: ['text']
   }, {
     name:       'guide_index',
     title:      'Guide',
-    page_parts: ['text']
+    parts: ['text']
   }, {
     name:       'plugins',
     title:      'Plugins',
-    page_parts: []
+    parts: []
   }, {
     name:       'showcase',
     title:      'Showcase',
-    page_parts: []
+    parts: []
   }, {
     name: 'show',
     title:        'Default',
     description:  'A simple page',
     usage:        'Use for your content',
-    page_parts:   ['text']
+    parts:   ['text']
   }]
 
   theme.custom_pages = [{

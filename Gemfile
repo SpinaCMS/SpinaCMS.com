@@ -8,15 +8,15 @@ git_source(:github) do |repo_name|
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.0'
+gem 'rails', '~> 6.0.0'
 gem 'pg'
-gem 'puma', '~> 3.7'
+gem 'puma', '~> 4.3'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'autoprefixer-rails'
 
 # Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.2'
+gem 'coffee-rails', '~> 5.0'
 
 gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
@@ -25,7 +25,8 @@ gem 'httparty'
 gem 'redcarpet'
 
 # Spina
-gem 'spina', github: 'spinacms/spina'
+gem 'spina', github: 'Bramjetten/Spina', branch: :attrjson
+gem 'spina-upgrade', github: 'spinacms/spina-upgrade', branch: :attrjson
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
