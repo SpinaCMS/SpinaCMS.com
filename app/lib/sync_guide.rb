@@ -18,14 +18,15 @@ class SyncGuide
   private
 
     def create_pages(docs, parent)
-      docs.each do |doc|
+      docs.each.with_index do |doc, index|
         if doc["type"] == "file"
           title = doc["name"].gsub(/\.md\z/, "").gsub(/\A\d?\.?(\s|_)?/, "").humanize
-          page = parent.children.create(title: title, view_template: "guide")
+          page = parent.children.create(title: title, view_template: "guide", position: index)
 
           # Content
           c = get_url(doc["download_url"]).body
-          part = page.page_parts.create(name: "text", title: "Text", page_partable: Spina::Text.create(content: c))
+          page.en_content << Spina::Parts::Text.new(name: "text", title: "Text", content: c)
+          page.save
 
           # Any children?
           child_folder = docs.find do |d|
