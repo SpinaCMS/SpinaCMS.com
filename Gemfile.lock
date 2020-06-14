@@ -21,16 +21,6 @@ GIT
       sass-rails
       turbolinks (~> 5)
 
-GIT
-  remote: https://github.com/spinacms/spina-upgrade.git
-  revision: 2c8d1efa8ef9b0bb401a9a8810ffda502aa8d346
-  branch: attrjson
-  specs:
-    spina-upgrade (0.2.0)
-      carrierwave
-      rails (> 5.2.0)
-      ruby-progressbar
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -110,13 +100,6 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (>= 2.0, < 4.0)
-    carrierwave (2.1.0)
-      activemodel (>= 5.0.0)
-      activesupport (>= 5.0.0)
-      addressable (~> 2.6)
-      image_processing (~> 1.1)
-      mimemagic (>= 0.3.0)
-      mini_mime (>= 0.1.3)
     childprocess (3.0.0)
     coffee-rails (5.0.0)
       coffee-script (>= 2.2.0)
@@ -176,9 +159,6 @@ GEM
       multi_xml (>= 0.5.2)
     i18n (1.8.3)
       concurrent-ruby (~> 1.0)
-    image_processing (1.10.3)
-      mini_magick (>= 4.9.5, < 5)
-      ruby-vips (>= 2.0.17, < 3)
     ipaddress (0.8.3)
     jquery-rails (4.4.0)
       rails-dom-testing (>= 1, < 3)
@@ -275,9 +255,6 @@ GEM
     redcarpet (3.5.0)
     request_store (1.5.0)
       rack (>= 1.4)
-    ruby-progressbar (1.10.1)
-    ruby-vips (2.0.17)
-      ffi (~> 1.9)
     ruby_dep (1.5.0)
     ruby_parser (3.14.2)
       sexp_processor (~> 4.9)
@@ -359,7 +336,6 @@ DEPENDENCIES
   selenium-webdriver
   skylight
   spina!
-  spina-upgrade!
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)

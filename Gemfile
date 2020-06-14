@@ -26,7 +26,6 @@ gem 'redcarpet'
 
 # Spina
 gem 'spina', github: 'Bramjetten/Spina', branch: :attrjson
-gem 'spina-upgrade', github: 'spinacms/spina-upgrade', branch: :attrjson
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
