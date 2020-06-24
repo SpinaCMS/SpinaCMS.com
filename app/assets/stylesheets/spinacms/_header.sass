@@ -41,10 +41,31 @@ body.fixed-navigation
 // Primary header
 
 body[data-view-template="homepage"] header#primary_header
-  min-height: 900px
+  .container
+    align-items: center
+    padding-left: 0
+
+  .header-title
+    padding-bottom: 0px
+    text-align: center
+
+  .header-subtitle p
+    margin: 0 auto
+
+  .header-screenshot
+    border-radius: 7px 7px 0 0
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, .25)
+    max-width: 80%
 
   @media #{$mobile}
     min-height: auto
+
+    .container
+      align-items: flex-start
+      padding: 0 20px
+
+    .header-title
+      text-align: left
 
 header#primary_header
   background: asset_url('spinacms/space.jpg') no-repeat center 
