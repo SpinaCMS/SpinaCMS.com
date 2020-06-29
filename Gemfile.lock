@@ -108,6 +108,8 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
+    commonmarker (0.21.0)
+      ruby-enum (~> 0.5)
     concurrent-ruby (1.1.6)
     connection_pool (2.2.2)
     crass (1.0.6)
@@ -252,9 +254,10 @@ GEM
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
-    redcarpet (3.5.0)
     request_store (1.5.0)
       rack (>= 1.4)
+    ruby-enum (0.8.0)
+      i18n
     ruby_dep (1.5.0)
     ruby_parser (3.14.2)
       sexp_processor (~> 4.9)
@@ -320,6 +323,7 @@ DEPENDENCIES
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 5.0)
+  commonmarker
   connection_pool
   dalli
   fog-aws
@@ -331,7 +335,6 @@ DEPENDENCIES
   puma (~> 4.3)
   rails (~> 6.0.0)
   rails_12factor
-  redcarpet
   sass-rails (~> 5.0)
   selenium-webdriver
   skylight

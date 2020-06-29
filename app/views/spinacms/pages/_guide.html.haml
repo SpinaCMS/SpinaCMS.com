@@ -1,7 +1,7 @@
 != GuideSyntax.convert(content(:text))
 
 .guide-links
-  - ids = Spina::Page.where(view_template: 'guide').sorted.ids
+  - ids = Spina::Page.find_by(name: 'guide').children.sorted.map{|p| [p.id] + p.children.sorted.ids}.flatten
   - current_index = ids.index(@page.id)
 
   - if current_index > 0
@@ -11,11 +11,11 @@
     - @next_page = Spina::Page.find_by(id: ids[current_index + 1])
 
   - if @previous_page.present?
-    = link_to @previous_page.materialized_path, class: 'guide-link guide-link-previous' do
+    = link_to @previous_page.materialized_path + "#main", class: 'guide-link guide-link-previous' do
       %small previous chapter
       = @previous_page.menu_title
 
   - if @next_page.present?
-    = link_to @next_page.materialized_path, class: 'guide-link guide-link-next' do
+    = link_to @next_page.materialized_path + "#main", class: 'guide-link guide-link-next' do
       %small next chapter
       = @next_page.menu_title

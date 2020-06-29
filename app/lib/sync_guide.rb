@@ -20,8 +20,9 @@ class SyncGuide
     def create_pages(docs, parent)
       docs.each.with_index do |doc, index|
         if doc["type"] == "file"
+          position = doc["name"].match(/\A\d/)[0]
           title = doc["name"].gsub(/\.md\z/, "").gsub(/\A\d?\.?(\s|_)?/, "").humanize
-          page = parent.children.create(title: title, view_template: "guide", position: index)
+          page = Spina::Page.create(title: title.titleize, view_template: "guide", parent_id: parent.id, position: position)
 
           # Content
           c = get_url(doc["download_url"]).body
