@@ -1,7 +1,6 @@
 GIT
-  remote: https://github.com/Bramjetten/Spina.git
-  revision: cd7a01e62e362bf62feee8537ef1bdc8350bfef9
-  branch: attrjson
+  remote: https://github.com/SpinaCMS/Spina.git
+  revision: 8b7d163c3d617f6e5604244dcf32aadc58bfe510
   specs:
     spina (2.0.0.alpha)
       ancestry
@@ -167,7 +166,7 @@ GEM
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     json (1.8.6)
-    jsonb_accessor (1.0.0)
+    jsonb_accessor (1.1.0)
       activerecord (>= 5.0)
       activesupport (>= 5.0)
       pg (>= 0.18.1)
@@ -313,7 +312,7 @@ GEM
     websocket-extensions (0.1.5)
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    zeitwerk (2.3.0)
+    zeitwerk (2.3.1)
 
 PLATFORMS
   ruby
