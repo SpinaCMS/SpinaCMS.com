@@ -46,7 +46,7 @@ class SyncGuide
     end
 
     def get_docs
-      self.class.get("/repos/spinacms/spina/contents/docs")
+      self.class.get("/repos/spinacms/spina/contents/docs/v2")
     end
 
     def get_url(url)
