@@ -4,7 +4,7 @@ $.fn.extend
       $guide = $(this)
 
       $guide.find('code').each (i, block) ->
-        block.innerHTML = block.innerHTML.replace("\n", "")
+        # block.innerHTML = block.innerHTML.replace("\n", "")
         hljs.highlightBlock(block)
 
 $(document).on 'turbolinks:load', ->
