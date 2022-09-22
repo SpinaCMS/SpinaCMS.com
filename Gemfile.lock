@@ -107,7 +107,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
-    commonmarker (0.23.4)
+    commonmarker (0.23.6)
     concurrent-ruby (1.1.9)
     connection_pool (2.2.2)
     crass (1.0.6)
